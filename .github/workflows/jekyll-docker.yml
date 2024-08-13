@@ -17,3 +17,4 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        dotnet nuget push "bin/Release/WebAuthentication.1.0.0.nupkg"  --api-key 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 --source "github"
