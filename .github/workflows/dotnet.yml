@@ -27,8 +27,3 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: pack
-      run: dotnet pack --configuration Release
-    - name: nuget push
-      run: dotnet nuget push "bin/Release/WebAuthentication.1.0.0.nupkg"  --api-key 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 --source "github"
-      
