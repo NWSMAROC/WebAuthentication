@@ -34,7 +34,7 @@ steps:
     configuration: '$(buildConfiguration)'
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: '<Your Azure Service Connection>'
+    azureSubscription: 'NwsAzureServiceConnection'
     appName: 'WebAuthService'
     appType: 'webApp' 
     package: '$(System.ArtifactsDirectory)/drop/**/*.zip'
