@@ -32,3 +32,9 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '<Your Azure Service Connection>'
+    appName: 'WebAuthService'
+    appType: 'webApp' 
+    package: '$(System.ArtifactsDirectory)/drop/**/*.zip'
